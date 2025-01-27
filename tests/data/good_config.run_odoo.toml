@@ -1,0 +1,6 @@
+[profile.mini-module]
+addon="eighteen_module"
+python_version="3.10.12"
+version=18.0
+enterprise=false
+ip="0.0.0.0"

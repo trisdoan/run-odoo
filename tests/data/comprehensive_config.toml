@@ -1,0 +1,62 @@
+[profile.development]
+version = 16.0
+python_version = "3.7.0"
+addons = ["sale", "purchase", "inventory"]
+enterprise = false
+themes = false
+db = "dev_db"
+path = "/custom/dev/path"
+extra_params = "--dev=all"
+http_port = 8069
+log_level = "info"
+workers = 1
+max_cron_threads = 1
+db_host = "localhost"
+db_user = "openerp"
+db_password = "openerp"
+
+[profile.production]
+version = 17.0
+python_version = "3.12.0"
+addons = ["sale", "purchase", "inventory", "account", "hr"]
+enterprise = true
+themes = true
+db = "prod_db"
+path = "/custom/prod/path"
+extra_params = "--workers=4 --max-cron-threads=2"
+http_port = 8080
+log_level = "warn"
+workers = 4
+max_cron_threads = 2
+db_host = "prod-db.example.com"
+db_user = "odoo"
+db_password = "secure_password"
+
+[profile.testing]
+version = 18.0
+python_version = "3.12.0"
+addons = ["base", "web", "test_module"]
+enterprise = false
+themes = false
+db = "test_db"
+http_port = 8090
+log_level = "debug"
+workers = 0
+test_enable = true
+stop_after_init = true
+
+[profile.minimal]
+version = 16.0
+addons = ["base"]
+
+[profile.enterprise_only]
+version = 17.0
+enterprise = true
+addons = ["base", "web"]
+db = "enterprise_db"
+
+[profile.custom_paths]
+version = 16.0
+addons = ["custom_module"]
+path = "/home/user/custom/addons"
+db = "custom_db" 

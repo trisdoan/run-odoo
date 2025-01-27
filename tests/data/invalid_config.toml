@@ -1,0 +1,18 @@
+[profile.invalid_version]
+version = "not_a_number"
+addons = ["test_module"]
+
+[profile.invalid_profiles]
+profile = "not_a_dict"
+
+[profile.invalid_profile_type]
+version = 16.0
+addons = "not_a_list"
+
+[profile.missing_brackets
+version = 16.0
+addons = ["test_module"]
+
+[profile.invalid_syntax
+version = 16.0
+addons = ["test_module"] 
